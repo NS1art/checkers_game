@@ -6,6 +6,10 @@ class Board:
     def __init__(self):      
         # define the pieces in a checkers board (if they are white, if they are red...)
         self.board = []
+        # we can imagine, in case of a 3*3 checkers board, that self.board looks like this:
+        #[[Piece(), 0, Piece()],  0 if there is nothing in that square
+        # [0, Piece(), 0],
+        # [0, 0, 0]]
         self.white_left = self.yellow_left = 12 # 
         # 12 because in a checkers game we have 12 pieces for both colors
         self.white_kings = self.yellow_kings = 0
@@ -26,6 +30,22 @@ class Board:
                                  SQUARE_SIZE,
                                  SQUARE_SIZE))
                 # draw a white rectange in the brown window
+                
+    def evaluate(self): 
+    # a method that will calculate the score of the actual board state
+        return self.white_left - self.yellow_left + (self.white_kings * 0.5 - self.yellow_kings * 0.5) 
+        # number of kings for both players are weighted by 0.5 so that they contribute more to the score than the numbers of normal pieces
+        
+    def get_all_pieces(self, color):
+        # this method counts number of all pieces having the same color
+        pieces = []
+        
+        for row in self.board:
+            for piece in row:
+                if piece != 0 and piece.color == color:
+                    pieces.append(piece)
+                    
+        return pieces
     
     def move(self, piece, row, col): 
         # you tell this method the piece you want to move
