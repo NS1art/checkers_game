@@ -71,3 +71,11 @@ class Game:
             self.turn = YELLOW
         else:
             self.turn = WHITE
+            
+    def get_board(self):
+    # just to take the actual board and perform the ai algorithm on it
+        return self.board
+    
+    def ai_move(self, board):
+        self.board = board
+        self.change_turn()
