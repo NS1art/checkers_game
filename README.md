@@ -34,6 +34,9 @@ The branch `main` corresponds to the first version of the Checkers Game, where t
 
 
 In a second step, the Minimax algorithm was added and corresponds to the player 2, aka the Artificial Intelligence.
+
+`minimax_algo.py`contains the function which makes the AI decide which move to make, according to a decision tree based on the player 1 possible moves.
+
 The branch `ia-minimax` corresponds to this "advanced" version of the Checkers Game, where the user can only be the player 1 and (hopefully) gets beated by the player 2!
 
 # How to run the game
