@@ -16,7 +16,7 @@ The aim of this project is to understand theorically the logic behind a Minimax 
 # Code organization
 
 The first step of the project was to build a classic and interactive Checkers Game.
-The branch `master` corresponds to the first version of the Checkers Game, where the user can plays both players 1 and 2.
+The branch `main` corresponds to the first version of the Checkers Game, where the user can plays both players 1 and 2.
 `constants.py` contains all constant variables called in the different python scripts. 
 `board.py` contains the class Board including all the methods used to define the Checkers board design (the number of squares, the remaining number of pieces for each player, the state of the board...)
 `piece.py` contains the class Piece including all the methods used to define anything related to a Checker piece (the color, the position on the board...)
